@@ -5,41 +5,47 @@ module.exports = {
       var iterate = 1;
       var j;      
 
-      if (num >= 2)
-      {
-         if(num == 2)
+      if(typeof(num) === 'number')
+      {      
+         if (num >= 2)
          {
-            prime.push(2);
-         }
-         else if(num >= 3)
-         {
-            prime.push(2);            
-            for(var i = 0; i < num -2; i += 2)
+            if(num == 2)
             {
-               prime.push(3 + i);
+               prime.push(2);
             }
-         }
-         var limit = Math.sqrt(num);
-         var primelength = prime.length;
-         while(iterate < primelength - 1)
-         {
-            if(prime[iterate] <= limit)
+            else if(num >= 3)
             {
-               j = 1 + iterate;
-               while(j < primelength)
+               prime.push(2);            
+               for(var i = 0; i < num -2; i += 2)
                {
-                  if(prime[j] % prime[iterate] == 0)
-                  {
-                    prime.splice(j,1);
-                  }   
-                      j += 1;
+                  prime.push(3 + i);
                }
             }
-            primelength = prime.length;
-            iterate += 1;
+            var limit = Math.sqrt(num);
+            var primelength = prime.length;
+            while(iterate < primelength - 1)
+            {
+               if(prime[iterate] <= limit)
+               {
+                  j = 1 + iterate;
+                  while(j < primelength)
+                  {
+                     if(prime[j] % prime[iterate] == 0)
+                     {
+                       prime.splice(j,1);
+                     }   
+                         j += 1;
+                  }
+               }
+               primelength = prime.length;
+               iterate += 1;
+            }
          }
+         return prime;
       }
-      return prime;
+      else
+      {
+         return 'Not a valid argument';
+      }
    }
-
 }
