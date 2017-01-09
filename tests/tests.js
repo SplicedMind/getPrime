@@ -29,8 +29,8 @@
         expect(myApp.getPrime(2)).toEqual([2]);
       });
 
-      it("should return [2,3] for an input of 3", function() {
-        expect(myApp.getPrime(3)).toEqual([2,3]);
+      it("should return `Not a valid argument` for an input of `11o`", function() {
+        expect(myApp.getPrime('11o')).toEqual('Not a valid argument');
       });
 
       it("should not return 1777 for an input of 10000", function() {
