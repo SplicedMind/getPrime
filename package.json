@@ -1,0 +1,25 @@
+{
+  "name": "getPrime",
+  "version": "1.0.0",
+  "description": "Basic JavaScript project to get the prime numbers from 0 to n where n is a positive integer",
+  "main": "app/getPrime.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SplicedMind/getPrime.git"
+  },
+  "author": "Akinbode Femi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SplicedMind/getPrime/issues"
+  },
+  "homepage": "https://github.com/SplicedMind/getPrime#readme",
+  "dependencies": {
+    "jasmine": "^2.5.2"
+  }
+}
